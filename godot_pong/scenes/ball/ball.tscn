@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5nwngy7y24y5"]
+
+[ext_resource type="Script" uid="uid://b1qnxhe5xrr4w" path="res://scenes/ball/ball.gd" id="1_abcde"]
+[ext_resource type="Texture2D" uid="uid://dherqx0cdagb5" path="res://assets/ball.png" id="2_jeuad"]
+[ext_resource type="Texture2D" uid="uid://bv6rd2q32tifd" path="res://img/pong/tralalero.png" id="3_oqv3d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xat8p"]
+
+[node name="Ball" type="CharacterBody2D" groups=["ball"]]
+position = Vector2(640, 300)
+script = ExtResource("1_abcde")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jeuad")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-0.500021, -0.5)
+scale = Vector2(0.0419999, 0.0500001)
+texture = ExtResource("3_oqv3d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.12, 1.12)
+shape = SubResource("CircleShape2D_xat8p")

@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5w5a3jkr2sgv"]
+
+[ext_resource type="Script" uid="uid://d25fvrxtjolhv" path="res://scenes/weapon_selection.gd" id="1_xcyac"]
+[ext_resource type="Texture2D" uid="uid://eknvqx3tibel" path="res://assets/beretta-92fs-9mm-pistol.png" id="2_wsfex"]
+[ext_resource type="Texture2D" uid="uid://onxhgmg8ven2" path="res://assets/shotgun.png" id="3_70yfg"]
+[ext_resource type="FontFile" uid="uid://dxgofg7pnl8fa" path="res://assets/alarm clock.ttf" id="4_5dyf5"]
+[ext_resource type="Texture2D" uid="uid://vwqh2oa8hpw3" path="res://assets/ak47button.png" id="5_8l6od"]
+
+[node name="WeaponSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xcyac")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -221.0
+offset_top = 100.0
+offset_right = 221.0
+offset_bottom = 159.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_5dyf5")
+theme_override_font_sizes/font_size = 80
+text = "CHOOSE YOUR WEAPON"
+
+[node name="BerettaButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = -101.0
+offset_right = -304.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_wsfex")
+
+[node name="ShotgunButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -253.0
+offset_top = -173.0
+offset_right = 59.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_70yfg")
+
+[node name="ak47Button" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 134.0
+offset_top = -166.0
+offset_right = 446.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_8l6od")
+
+[connection signal="pressed" from="BerettaButton" to="." method="_on_beretta_button_pressed"]
+[connection signal="pressed" from="ShotgunButton" to="." method="_on_shotgun_button_pressed"]
+[connection signal="pressed" from="ak47Button" to="." method="_on_ak_47_button_pressed"]

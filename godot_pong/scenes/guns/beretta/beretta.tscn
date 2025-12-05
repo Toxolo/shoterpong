@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1vfrp6d1i3s0"]
+
+[ext_resource type="Script" path="res://scenes/guns/beretta/beretta.gd" id="1_abcde"]
+[ext_resource type="Texture2D" path="res://assets/beretta-92fs-9mm-pistol.png" id="2_fghij"]
+
+[node name="Beretta" type="Node2D"]
+script = ExtResource("1_abcde")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_fghij")
+scale = Vector2(0.1, 0.1)
+
+[node name="FireRateTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="ReloadTimer" type="Timer" parent="."]
+one_shot = true

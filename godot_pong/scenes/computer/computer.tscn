@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://do4m7v4xypqbc"]
+
+[ext_resource type="Texture2D" uid="uid://s5non030mkxo" path="res://scenes/paddle-red.png" id="2_g8u4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_difci"]
+size = Vector2(20, 52.302094)
+
+[node name="Computer" type="CharacterBody2D"]
+position = Vector2(1127, 320)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_g8u4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.3843994, -26.166687)
+rotation = 0.2617994
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_difci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D"]
+position = Vector2(13.578781, 48.29797)
+rotation = -0.5235988
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_difci")

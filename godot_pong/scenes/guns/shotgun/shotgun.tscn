@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2qeb3w3ufsur"]
+
+[ext_resource type="Script" uid="uid://cpd338qxdwvov" path="res://scenes/guns/shotgun/shotgun.gd" id="1_abcde"]
+[ext_resource type="Texture2D" uid="uid://onxhgmg8ven2" path="res://assets/shotgun.png" id="2_fghij"]
+
+[node name="Shotgun" type="Node2D"]
+script = ExtResource("1_abcde")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(12.2, 5.7499986)
+scale = Vector2(0.4, 0.298)
+texture = ExtResource("2_fghij")
+
+[node name="FireRateTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="ReloadTimer" type="Timer" parent="."]
+one_shot = true

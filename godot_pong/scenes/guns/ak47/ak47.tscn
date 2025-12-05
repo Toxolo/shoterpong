@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7pukxvkpox4x"]
+
+[ext_resource type="Texture2D" uid="uid://vwqh2oa8hpw3" path="res://assets/ak47button.png" id="2_o2rdy"]
+[ext_resource type="Script" uid="uid://va4x5imij8ny" path="res://scenes/guns/ak47/ak47.gd" id="3_ewuxn"]
+
+[node name="ak47" type="Node2D"]
+script = ExtResource("3_ewuxn")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(12.2, 5.7499986)
+scale = Vector2(0.4, 0.298)
+texture = ExtResource("2_o2rdy")
+
+[node name="FireRateTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="ReloadTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
